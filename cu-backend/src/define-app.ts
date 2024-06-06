@@ -3,6 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import http from 'http';
 import bodyParser from 'body-parser';
+import {router as weather} from './routes/weather-routes';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(cors({
 }));
 
 app.use(bodyParser.json());
+app.use(weather)
 
 const SERVER = http.createServer(app);
 
