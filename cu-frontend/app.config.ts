@@ -1,5 +1,11 @@
 export default defineAppConfig({
     ui: {
-        primary: "black"
+        strategy: 'override',
+        primary: "stone",
+        button: {
+            default: {
+                variant: 'solid',
+            },
+        }
     }
 })
